@@ -1,2 +1,2 @@
 # Colaborative-Task-Platform
-Repositório para o aplicativo internet // web app  de projeto de tarefas colaborativas
+Git repository for my colaborative task web app project
