@@ -1,0 +1,82 @@
+/* Style for the entire ListaDePessoas container */
+.paragraph {
+    padding: 100px;
+}
+
+.small-input {
+    width: 250px;
+
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 30px; margin-right: 30px; margin-top: 30px;
+}
+
+/* Style for the table headers */
+.table thead th {
+    background-color: #808080; /* Gray */
+    color: white;
+    text-align: left;
+    padding: 30px 150px; /* Increase padding for spacing */
+}
+
+/* Style for the table rows */
+.table tbody td {
+    padding: 30px 12px; /* Increase padding for spacing */
+    border: 1px solid #ccc;
+}
+
+/* Style for the "Ações" column */
+.actions-column {
+    display: flex;
+    gap: 20px; /* Increase gap for spacing */
+}
+
+/* Style for the Edit and Delete buttons */
+.edit-button,
+.delete-button {
+    padding: 20px 50px; /* Increase padding for spacing */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.edit-button {
+    background-color: green; /* Green */
+    color: white;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+}
+
+/* Style for the "Voltar para Cadastro" and "Incluir" buttons */
+.link-button,
+.button-incluir {
+    background-color: #808080; /* Gray */
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+    width: 20%; /* Adjust the width for both buttons */
+    display: inline-block; /* Display them inline-block */
+}
+
+.link-button:hover,
+.button-incluir:hover {
+    background-color: #555;
+}

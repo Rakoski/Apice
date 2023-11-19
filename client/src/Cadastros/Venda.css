@@ -1,0 +1,55 @@
+.venda-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 30px;
+}
+
+.venda-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.venda-field {
+    flex-basis: calc(33.33% - 10px);
+}
+
+.venda-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.venda-input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.venda-value {
+    font-weight: bold;
+}
+
+.venda-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.venda-icon {
+    margin-right: 5px;
+}

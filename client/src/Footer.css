@@ -1,0 +1,17 @@
+footer {
+    position: sticky;
+    bottom: 0;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-text {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer-date-time {
+    font-size: 14px;
+}

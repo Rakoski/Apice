@@ -1,0 +1,97 @@
+.cadastro-pessoa-container {
+    margin: 30px;
+    margin-left: 205px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+}
+
+.cadastro-pessoa-container .form-row {
+    margin: 15px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Grupos de formulários (form groups) e seus tamanhos */
+.cadastro-pessoa-container .form-group {
+    width: 48%;
+}
+
+.cadastro-pessoa-container > div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.cadastro-pessoa-container label,
+.cadastro-pessoa-container input[type="text"],
+.cadastro-pessoa-container select {
+    font-size: 22px;
+}
+
+/* Estilos para os botoões (Cancelar and Confirmar) */
+.cadastro-pessoa-container .button-container {
+    margin: 30px;
+    margin-left: 150px;
+    display: flex;
+    justify-content: start;
+}
+
+.cadastro-pessoa-container .button-container button {
+    margin-left: 10px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.cadastro-pessoa-container .button-container .cancel-button {
+    background-color: red;
+    color: white;
+}
+
+.cadastro-pessoa-container .button-container .confirm-button {
+    background-color: green;
+    color: white;
+}
+
+.cadastro-pessoa-container .button-container .list-button {
+    background-color: rgb(128, 128, 128);
+    color: white;
+}
+
+/* estilos para as labels */
+.cadastro-pessoa-container label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.cadastro-pessoa-container input[type="text"],
+.cadastro-pessoa-container select {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.cadastro-pessoa-container select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='%23007bff'%3E%3Cpath d='M16 22.3l-8.5-8.5-1.4 1.4 10 10 .1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1 10-10-1.4-1.4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right ;
+    padding: 12px 50px;
+    font-size: 14px;
+}
+
+.cadastro-pessoa-container input[type="text"]:focus,
+.cadastro-pessoa-container select:focus {
+    outline: none;
+    border-color: #007bff;
+}

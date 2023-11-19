@@ -1,0 +1,107 @@
+/* container principal ListaDePessoas */
+.list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+}
+
+/* container de filtros */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.filter-container input {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding:  10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* filtro */
+.filter-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+
+/* estilos para a tabela de resultados */
+.table {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+
+.table td,
+.table th {
+    padding: 10px;
+    text-align: center;
+}
+
+.data-input {
+    width: 100%;
+    padding: 05px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* dropdowns */
+.dropdown-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.dropdown-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+/* campos de input sem ser dropdowns */
+.table th {
+    background-color: #808080; /* cinza */
+    color: white;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.venda-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.venda-input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.dropdown select {
+    background-color: white;
+    color: rgba(80, 80, 80, 0.94);
+}
+

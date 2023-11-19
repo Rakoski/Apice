@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "Mateus",
+    "password": "Mateus0312",
+    "database": "apice",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}
