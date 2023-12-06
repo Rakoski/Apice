@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import CadastroPessoa from "./Cadastros/CadastroPessoa";
 import './App.css'
-import { Route, Routes, BrowserRouter as Router, useNavigate } from 'react-router-dom';
+import {Route, Routes, BrowserRouter as Router, useNavigate, Navigate} from 'react-router-dom';
 import FiltroPessoas from "./Listas/FiltroPessoas";
 import ListaDePessoas from "./Listas/ListaDePessoas";
 import ListaVenda from "./Listas/ListaVenda";
@@ -16,15 +16,14 @@ import ListaDeProdutos from "./Listas/ListaProduto";
 import CadastroCidade from "./Cadastros/CadastroCidade";
 import ListaCidade from "./Listas/ListaCidade";
 import FiltroVendas from "./Listas/FiltroVendas";
-
-function Vendas() {
-    return null;
-}
+import Login from "./Autorizacao/Login";
 
 function App() {
+    const [isLoggedIn, setLoggedIn] = useState(false);
     const [inputValue1, setInputValue1] = useState('Cadastro');
     const [inputValue2, setInputValue2] = useState('Movimentos');
     const [inputValue3, setInputValue3] = useState('Relatórios');
+
     const listItemWidth = '215px';
     const containerRef = useRef(null);
 
@@ -43,6 +42,7 @@ function App() {
         <Router>
             <div>
                 <Header />
+                {isLoggedIn ? (
                 <div className="combobox-container" ref={containerRef}>
                     <Dropdowns
                         options={['Bairros', 'Cidades', 'Pessoas', 'Produtos']}
@@ -69,6 +69,7 @@ function App() {
                     />
 
                     <Routes>
+                        <Route path="/" element={<Login />} />
                         <Route path="/bairros" element={<CadastroBairro />} />
                         <Route path="/cidades" element={<CadastroCidade />} />
                         <Route path="/pessoas" element={<CadastroPessoa />} />
@@ -83,6 +84,12 @@ function App() {
                         <Route path="/lista de vendas" element={<ListaVenda />}/>
                     </Routes>
                 </div>
+                ) : (
+                    <Routes>
+                        <Route path="/login" element={<Login onLogin={() => setLoggedIn(true)} />} />
+                        <Route path="/" element={<Navigate to="/login" />} />
+                    </Routes>
+                )}
             </div>
             <Footer />
         </Router>
