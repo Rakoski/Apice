@@ -1,4 +1,3 @@
-// Header.js
 import './Header.css';
 import React from 'react';
 

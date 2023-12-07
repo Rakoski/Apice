@@ -29,10 +29,11 @@ function App() {
 
     useEffect(() => {
         const container = containerRef.current;
+
         if (container) {
             const screenHeight = window.innerHeight;
-            const headerHeight = document.querySelector('header').offsetHeight;
-            const footerHeight = document.querySelector('footer').offsetHeight;
+            const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+            const footerHeight = document.querySelector('footer')?.offsetHeight || 0;
             const minimumHeight = screenHeight - headerHeight - footerHeight;
             container.style.minHeight = `${minimumHeight}px`;
         }
@@ -41,55 +42,62 @@ function App() {
     return (
         <Router>
             <div>
-                <Header />
                 {isLoggedIn ? (
-                <div className="combobox-container" ref={containerRef}>
-                    <Dropdowns
-                        options={['Bairros', 'Cidades', 'Pessoas', 'Produtos']}
-                        listItemWidth={listItemWidth}
-                        defaultValue={inputValue1}
-                        inputValue={inputValue1}
-                        setInputValue={setInputValue1}
-                    />
+                    <div className="combobox-container" ref={containerRef}>
+                        {isLoggedIn && <Header />}
+                        {isLoggedIn ? (
+                            <div>
+                                <Dropdowns
+                                    options={['Bairros', 'Cidades', 'Pessoas', 'Produtos']}
+                                    listItemWidth={listItemWidth}
+                                    defaultValue={inputValue1}
+                                    inputValue={inputValue1}
+                                    setInputValue={setInputValue1}
+                                />
 
-                    <Dropdowns
-                        options={['Vendas', 'Lista de vendas']}
-                        listItemWidth={listItemWidth}
-                        defaultValue={inputValue2}
-                        inputValue={inputValue2}
-                        setInputValue={setInputValue2}
-                    />
+                                <Dropdowns
+                                    options={['Vendas', 'Lista de vendas']}
+                                    listItemWidth={listItemWidth}
+                                    defaultValue={inputValue2}
+                                    inputValue={inputValue2}
+                                    setInputValue={setInputValue2}
+                                />
 
-                    <Dropdowns
-                        options={['Filtro de pessoas', 'Filtro de Vendas']}
-                        listItemWidth={listItemWidth}
-                        defaultValue={inputValue3}
-                        inputValue={inputValue3}
-                        setInputValue={setInputValue3}
-                    />
+                                <Dropdowns
+                                    options={['Filtro de pessoas', 'Filtro de Vendas']}
+                                    listItemWidth={listItemWidth}
+                                    defaultValue={inputValue3}
+                                    inputValue={inputValue3}
+                                    setInputValue={setInputValue3}
+                                />
 
-                    <Routes>
-                        <Route path="/" element={<Login />} />
-                        <Route path="/bairros" element={<CadastroBairro />} />
-                        <Route path="/cidades" element={<CadastroCidade />} />
-                        <Route path="/pessoas" element={<CadastroPessoa />} />
-                        <Route path="/produtos" element={<CadastroProduto />} />
-                        <Route path="/vendas" element={<Venda />}/>
-                        <Route path="filtro de vendas" element={<FiltroVendas />}/>
-                        <Route path="/lista de bairros" element={<ListaBairros />}/>
-                        <Route path="/lista de cidades" element={<ListaCidade />}/>
-                        <Route path="/filtro de pessoas" element={<FiltroPessoas />}/>
-                        <Route path="/lista de pessoas" element={<ListaDePessoas />}/>
-                        <Route path="/lista de produtos" element={<ListaDeProdutos />}/>
-                        <Route path="/lista de vendas" element={<ListaVenda />}/>
-                    </Routes>
-                </div>
-                ) : (
-                    <Routes>
-                        <Route path="/login" element={<Login onLogin={() => setLoggedIn(true)} />} />
-                        <Route path="/" element={<Navigate to="/login" />} />
-                    </Routes>
-                )}
+                                <Routes>
+                                    <Route path="/" element={<Login />} />
+                                    <Route path="/bairros" element={<CadastroBairro />} />
+                                    <Route path="/cidades" element={<CadastroCidade />} />
+                                    <Route path="/pessoas" element={<CadastroPessoa />} />
+                                    <Route path="/produtos" element={<CadastroProduto />} />
+                                    <Route path="/vendas" element={<Venda />}/>
+                                    <Route path="filtro de vendas" element={<FiltroVendas />}/>
+                                    <Route path="/lista de bairros" element={<ListaBairros />}/>
+                                    <Route path="/lista de cidades" element={<ListaCidade />}/>
+                                    <Route path="/filtro de pessoas" element={<FiltroPessoas />}/>
+                                    <Route path="/lista de pessoas" element={<ListaDePessoas />}/>
+                                    <Route path="/lista de produtos" element={<ListaDeProdutos />}/>
+                                    <Route path="/lista de vendas" element={<ListaVenda />}/>
+                                </Routes>
+                            </div>
+                        ) : (
+                            <Routes>
+                                <Route path="/login" element={<Login onLogin={() => setLoggedIn(true)} />} />
+                                <Route path="/" element={<Navigate to="/login" />} />
+                            </Routes>
+                        )}
+                    </div>
+                ) : <Routes>
+                    <Route path="/login" element={<Login onLogin={() => setLoggedIn(true)} />} />
+                    <Route path="/" element={<Navigate to="/login" />} />
+                </Routes>}
             </div>
             <Footer />
         </Router>

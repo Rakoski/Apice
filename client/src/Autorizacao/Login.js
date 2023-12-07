@@ -9,11 +9,11 @@ const Login = () => {
     };
 
     return (
-        <div>
+        <div className="login-container">
             <h2>Login</h2>
             <form>
-                <label>
-                    Username:
+                <label className="username-label">
+                    Nome:
                     <input
                         type="text"
                         value={username}
@@ -21,8 +21,8 @@ const Login = () => {
                     />
                 </label>
                 <br />
-                <label>
-                    Password:
+                <label className="password-label">
+                    Senha:
                     <input
                         type="password"
                         value={password}

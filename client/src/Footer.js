@@ -7,7 +7,7 @@ function Footer() {
     useEffect(() => {
         const interval = setInterval(() => {
             setDateTime(new Date());
-        }, 1000); // Update every second
+        }, 1000);
 
         return () => {
             clearInterval(interval); // Cleanup interval on unmount

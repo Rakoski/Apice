@@ -1,6 +1,11 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 footer {
-    position: sticky;
-    bottom: 0;
+    margin-top: 750px;
     background-color: #f9f9f9;
     border-top: 1px solid #ccc;
     padding: 10px;
