@@ -1,6 +1,6 @@
 # README - Front-end do Projeto de Estágio da Ápice Sistemas
 
-Este é o README para o projeto desenvolvido com o objetivo de se candidatar a um estágio na companhia Ápice Sistemas. O projeto é uma aplicação web construída com React para o frontend, Node.js, Express e Sequelize para o backend, e utiliza um banco de dados MySQL. A seguir, fornecemos informações essenciais sobre o projeto e como configurá-lo para execução.
+Este é o README para o projeto desenvolvido com o objetivo de se candidatar a um estágio na companhia Ápice Sistemas. O projeto é uma aplicação web construída com React.js para o frontend, Node.js, Express e Sequelize para o backend, e utiliza o banco de dados MySQL. A seguir, informações essenciais sobre o projeto e como configurá-lo para execução:
 
 ## Visão Geral do Projeto
 
