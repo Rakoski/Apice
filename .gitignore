@@ -23,6 +23,7 @@
 # misc
 /client/README.md
 /client/package-lock.json
+/server/apice_sistema/README.md
 .DS_Store
 .env.local
 .env.development.local
