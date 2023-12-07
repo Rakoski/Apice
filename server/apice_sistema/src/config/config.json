@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "Mateus",
-    "password": "Mateus0312",
+    "username": "meu-usuario",
+    "password": "minha-senha",
     "database": "apice",
     "host": "localhost",
     "dialect": "mysql"
