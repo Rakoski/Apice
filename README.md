@@ -29,7 +29,7 @@ O projeto é uma aplicação de gerenciamento de informações relacionadas a ba
 
 4. Configure o banco de dados MySQL e o backend do sistema:
 
-### A estrutura do projeto NodeJS gerenciado pelo npm (Node Package Manager) em combinação com o  "Node.js Package Manager" (nvm) ou o "Yarn" segue a seguinte organização:
+- A estrutura do projeto NodeJS gerenciado pelo npm (Node Package Manager) em combinação com o  "Node.js Package Manager" (nvm) ou o "Yarn" segue a seguinte organização:
 
 - `apice_sistema/src/`: Pacote principal.
 - `controllers`: Os controladores são funções que respondem às solicitações HTTP e executam a lógica de negócios.
