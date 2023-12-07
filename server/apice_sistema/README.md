@@ -18,7 +18,7 @@ Este é o backend do projeto de aplicativo de gerenciamento da Ápice sistemas, 
 3. cd para src/
 4. Execute o aplicativo usando o node: node index.js
 
-## Estrutura do Projeto
+## Estrutura do Projeto Backend
 
 A estrutura do projeto NodeJS gerenciado pelo npm (Node Package Manager) em combinação com o  "Node.js Package Manager" (nvm) ou o "Yarn" segue a seguinte organização:
 

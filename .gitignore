@@ -1,9 +1,18 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+/package.json
+/client/node_modules
+/client/.idea
+/server/.idea
+/server/apice_sistema/node_modules
 /.pnp
 .pnp.js
+
+#security (for me)
+/server/apice_sistema/sequelize.js
+/server/apice_sistema/src/config
+/server/apice_sistema/.env
 
 # testing
 /coverage
@@ -12,6 +21,8 @@
 /build
 
 # misc
+/client/README.md
+/client/package-lock.json
 .DS_Store
 .env.local
 .env.development.local
