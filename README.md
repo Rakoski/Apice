@@ -27,11 +27,17 @@ O projeto é uma aplicação de gerenciamento de informações relacionadas a ba
 
 3. Instale as dependências do projeto com <code>npm install</code>
 
-4. Configure o banco de dados MySQL com as credenciais apropriadas no outro repositório do backend [apice_sistema](https://github.com/Rakoski/apice_sistema)
+4. Configure o banco de dados MySQL e o backend do sistema:
 
-5. As endpoints também podem ser encontradas no repositório do backend [apice_sistema](https://github.com/Rakoski/apice_sistema)
+### A estrutura do projeto NodeJS gerenciado pelo npm (Node Package Manager) em combinação com o  "Node.js Package Manager" (nvm) ou o "Yarn" segue a seguinte organização:
 
-6. inicie o servidor frontend:
+- `apice_sistema/src/`: Pacote principal.
+- `controllers`: Os controladores são funções que respondem às solicitações HTTP e executam a lógica de negócios.
+- `models`: Modelos de dados da aplicação.
+- `routes`:  As rotas são usadas para definir como o servidor deve responder a diferentes solicitações HTTP.
+- `service`: Camada de serviço que lida com a lógica de negócios.
+
+5. inicie o servidor frontend:
 
 <code>npm start</code>
 
@@ -65,16 +71,6 @@ O projeto oferece as seguintes funcionalidades:
 
 - Cadastro de produtos:
   ![image](https://github.com/Rakoski/apice_frontend/assets/126481665/012463b3-8335-480a-a93b-e3a712623d1d)
-
-## Estrutura do Projeto Backend
-
-A estrutura do projeto NodeJS gerenciado pelo npm (Node Package Manager) em combinação com o  "Node.js Package Manager" (nvm) ou o "Yarn" segue a seguinte organização:
-
-- `apice_sistema/src/`: Pacote principal.
-- `controllers`: Os controladores são funções que respondem às solicitações HTTP e executam a lógica de negócios.
-- `models`: Modelos de dados da aplicação.
-- `routes`:  As rotas são usadas para definir como o servidor deve responder a diferentes solicitações HTTP.
-- `service`: Camada de serviço que lida com a lógica de negócios.
 
 ## API Endpoints
 
