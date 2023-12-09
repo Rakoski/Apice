@@ -11,7 +11,7 @@
 
 #security (for me)
 /server/apice_sistema/sequelize.js
-/server/apice_sistema/src/config
+/server/apice_sistema/src/config/config.json
 /server/apice_sistema/.env
 
 # testing
