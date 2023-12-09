@@ -1,3 +1,7 @@
 .login-container {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    border: 2px solid black;
 }
