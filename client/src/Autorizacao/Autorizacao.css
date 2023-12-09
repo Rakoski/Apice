@@ -1,7 +1,16 @@
 .login-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Set the height to 100% of the viewport height */
-    border: 2px solid black;
+    height: 100vh;
+    margin-right: 10px;
+}
+
+.login-label {
+    font-size: 1.5em;
+}
+
+form {
+    text-align: center;
 }
