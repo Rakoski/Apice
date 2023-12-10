@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require('cors');
 const Sequelize = require("sequelize");
+const jwt = require('jsonwebtoken')
 
 require('dotenv').config();
 
@@ -28,8 +29,18 @@ app.use(express.json());
 
 app.use("/api", postsRouter);
 
+app.post("/login", (req, res) => {
+    // autentica ele
+
+    const username = req.body.username
+    const user = { name: username }
+
+    const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET)
+    res.json({accessToken: accessToken })
+})
+
 // pra facilitar o netstat
-const porta = 8080;
+const porta = 8081;
 
 sequelize.sync()
     .then(() => {
