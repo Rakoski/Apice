@@ -1,4 +1,3 @@
-// controllers/vendas.contrroller.js
 const vendasService = require("../services/servicoVendas")
 
 const vendasController = {
@@ -8,7 +7,7 @@ const vendasController = {
             const data = await vendasService.getVendas();
             res.json({ data });
         } catch (error) {
-            console.error("Erroo pegar dados do banco de dados:", error);
+            console.error("Erro ao pegar dados do banco de dados:", error);
             res.status(500).json({ error: "Um erro ocorreu"});
         }
     },
