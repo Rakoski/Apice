@@ -1,6 +1,6 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt')
-const authUtils = require('auth/authUtils')
+const authUtils = require('./auth/authUtils')
 const sequelize = new Sequelize(
     process.env.DB_DBNAME,
     process.env.DB_USERNAME,
@@ -39,20 +39,16 @@ const usuarioServico = {
         }
     },
 
-    createUsuario: async (usuario_nome, usuario_sobrenome, usuario_email, usuario_senha, id_usuario = null) => {
+    createUsuario: async (usuario_nome, usuario_sobrenome, usuario_email, usuario_senha) => {
         try {
 
-            usuario_senha = authUtils.hashPassword(usuario_senha)
+            const senhaPraInserirNaDB = await authUtils.hashPassword(usuario_senha)
 
             console.log(usuario_senha)
 
             const usuarioData = {
-                usuario_nome, usuario_sobrenome, usuario_email, usuario_senha
+                usuario_nome, usuario_sobrenome, usuario_email, usuario_senha: senhaPraInserirNaDB
             };
-
-            if (id_usuario !== null) {
-                usuarioData.id_usuario = id_usuario;
-            }
 
             return await Usuario.create(usuarioData);
         } catch (error) {

@@ -8,7 +8,7 @@ const pool = mysql.createPool({
 });
 
 // estava tendo problemas com o .env então preciso usar isso para ter certeza das configurações
-// isso pois já que como normalmente uso o application.properties no spring boot, nunca tinha usado o .env antes
+// isso porque normalmente uso o application.properties no spring boot então nunca tinha usado o .env antes
 if (!process.env.DB_HOST || !process.env.DB_USERNAME || !process.env.DB_PASSWORD || !process.env.DB_DBNAME) {
     console.error('Erro de variáveis de ambiente e/ou configurações de banco da dados');
     process.exit(500);

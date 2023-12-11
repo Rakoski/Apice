@@ -6,6 +6,7 @@ const cidadeController = require("../controllers/cidade.controller")
 const pessoaController = require("../controllers/pessoa.controller")
 const vendaController = require("../controllers/venda.controller")
 const vendaServicoController = require("../controllers/vendaProduto.controller")
+const usuarioController = require("../controllers/usuario.controller")
 
 router.get("/produtos", produtosController.getProdutos)
 router.post("/produtos", produtosController.postProduto)
@@ -53,5 +54,13 @@ router.get("/vendas_produtos/:id", vendaServicoController.getVendaProdutoById)
 router.get("/vendas_produtos/produto/:produto_id", vendaServicoController.getVendasByIdProduto);
 router.put("/vendas_produtos/:id", vendaServicoController.putVendaProduto)
 router.delete("/vendas_produtos/:id", vendaServicoController.deleteVendaProduto)
+
+router.post("/login", usuarioController.loginUsuario)
+router.get("/usuarios", usuarioController.getUsuarios)
+router.post("/usuarios", usuarioController.postUsuario)
+router.get("/usuarios/:id", usuarioController.getUsuarioById)
+router.get("/usuarios/email/:email", usuarioController.getUsuarioByEmail)
+router.put("/usuarios/:id", usuarioController.putUsuario)
+router.delete("/usuarios/:id", usuarioController.deleteUsuario)
 
 module.exports = router

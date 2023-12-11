@@ -49,6 +49,7 @@ db.cidade = require("./cidade")(sequelize, DataTypes)
 db.venda_produto = require("./venda_produto")(sequelize, DataTypes)
 db.produto = require("./produto")(sequelize, DataTypes)
 db.venda = require("./venda")(sequelize, DataTypes)
+db.usuario = require("./usuario")(sequelize, DataTypes)
 
 db.bairro.hasMany(db.pessoa, {
   foreignKey : 'bairro_id',
