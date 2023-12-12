@@ -49,6 +49,14 @@ foreign key (venda_id) references venda(id_venda) ON DELETE CASCADE,
 foreign key (produto_id) references produto(id_produto) ON DELETE CASCADE
 );
 
+CREATE TABLE usuario(
+id_usuario BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+usuario_nome varchar(255) not null,
+usuario_sobrenome varchar(255) not null,
+usuario_email varchar(100) not null unique,
+usuario_senha varchar(255) not null
+);
+
 
 
 
