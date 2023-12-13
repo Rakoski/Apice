@@ -1,4 +1,5 @@
 const usuariosService = require("../services/servicoUsuario")
+const jwt = require("jsonwebtoken")
 
 const usuariosController = {
 
@@ -61,10 +62,11 @@ const usuariosController = {
         try {
             const { usuario_email, usuario_senha } = req.body;
 
-            const result = await usuariosService.loginDoUsuario(usuario_email, usuario_senha);
+            const [controle, tokenAcesso] = await usuariosService.loginDoUsuario(usuario_email, usuario_senha);
 
-            if (result && result.message === "Usuário logado com sucesso!") {
-                res.status(200).json({ success: true, message: result.message });
+            if (controle) {
+
+                res.status(200).json({ success: true, message: "Usuário logado com sucesso!", token: tokenAcesso });
             } else {
                 res.status(401).json({ success: false, message: "Credenciais inválidas." });
             }
@@ -74,6 +76,19 @@ const usuariosController = {
         }
     },
 
+    autenticaToken: async (req, res, next) => {
+        const headerDaAuth = req.headers['authorization']
+        const token = headerDaAuth && headerDaAuth.split(" ")[1]
+
+        if (token == null) return res.sendStatus(401)
+
+        jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+            if (err) return res.sendStatus(403)
+
+            req.user = user
+            next()
+        })
+    },
 
     putUsuario: async (req, res) => {
         try {

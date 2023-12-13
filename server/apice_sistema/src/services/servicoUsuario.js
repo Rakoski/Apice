@@ -1,4 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
+const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const authUtils = require('./auth/authUtils')
 const sequelize = new Sequelize(
@@ -57,14 +58,16 @@ const usuarioServico = {
     },
 
     loginDoUsuario: async (usuario_email, senha) => {
+        let controle = false
         const usuarioPego = await Usuario.findOne({ where: { usuario_email: usuario_email } })
-
-        console.log(usuarioPego)
 
         try {
             if (await bcrypt.compare(senha, usuarioPego.usuario_senha)) {
-                return { message: "Usuário logado com sucesso!" }
+                const tokenAcesso = jwt.sign(usuario_email, process.env.ACCESS_TOKEN_SECRET)
+                controle = true
+                return [controle, tokenAcesso]
             }
+        return controle
         } catch (erro) {
             console.error("Erro no Login do usuário: ", erro)
         }
