@@ -76,7 +76,7 @@ const usuariosController = {
         }
     },
 
-    autenticaToken: async (req, res, next) => {
+    autenticaToken: async (req, res) => {
         const headerDaAuth = req.headers['authorization']
         const token = headerDaAuth && headerDaAuth.split(" ")[1]
 
@@ -86,7 +86,7 @@ const usuariosController = {
             if (err) return res.sendStatus(403)
 
             req.user = user
-            next()
+            return res.status(200).json({ success: true, message: "Usuário autorizado!" });
         })
     },
 
