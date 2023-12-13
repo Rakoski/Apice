@@ -56,6 +56,7 @@ router.put("/vendas_produtos/:id", vendaServicoController.putVendaProduto)
 router.delete("/vendas_produtos/:id", vendaServicoController.deleteVendaProduto)
 
 router.post("/login", usuarioController.loginUsuario)
+router.get("/autoriza", usuarioController.authenticateToken)
 router.get("/usuarios", usuarioController.getUsuarios)
 router.post("/usuarios", usuarioController.postUsuario)
 router.get("/usuarios/:id", usuarioController.getUsuarioById)
