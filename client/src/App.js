@@ -17,9 +17,10 @@ import CadastroCidade from "./Cadastros/CadastroCidade";
 import ListaCidade from "./Listas/ListaCidade";
 import FiltroVendas from "./Listas/FiltroVendas";
 import Login from "./Autorizacao/Login";
+import { useAuth } from "./Autorizacao/AuthContext";
 
 function App() {
-    const [isLoggedIn, setLoggedIn] = useState(false);
+    const { isLoggedIn } = useAuth();
     const [inputValue1, setInputValue1] = useState('Cadastro');
     const [inputValue2, setInputValue2] = useState('Movimentos');
     const [inputValue3, setInputValue3] = useState('Relatórios');
@@ -89,15 +90,17 @@ function App() {
                             </div>
                         ) : (
                             <Routes>
-                                <Route path="/login" element={<Login onLogin={() => setLoggedIn(true)} />} />
+                                <Route path="/login" element={<Login />} />
                                 <Route path="/" element={<Navigate to="/login" />} />
                             </Routes>
                         )}
                     </div>
-                ) : <Routes>
-                    <Route path="/login" element={<Login onLogin={() => setLoggedIn(true)} />} />
-                    <Route path="/" element={<Navigate to="/login" />} />
-                </Routes>}
+                ) : (
+                    <Routes>
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/" element={<Navigate to="/login" />} />
+                    </Routes>
+                )}
             </div>
             <Footer />
         </Router>

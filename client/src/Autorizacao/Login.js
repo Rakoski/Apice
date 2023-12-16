@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./Autorizacao.css";
+import { useAuth } from "./AuthContext";
 import apiceLogo from "../imagens/apice_logo.png";
 
 const Login = () => {
+    const { login } = useAuth();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
@@ -35,7 +37,7 @@ const Login = () => {
                 const authData = await authResponse.json();
 
                 if (authData.success) {
-                    console.log("Usuário autenticado e autorizado!");
+                    login();
                 } else {
                     console.log("Usuário autenticado mas não autorizado!");
                 }
