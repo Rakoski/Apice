@@ -19,7 +19,7 @@ O projeto é uma aplicação de gerenciamento de informações relacionadas a ba
 
 1. Clone este repositório em sua máquina local:
 
-<code>git clone [https://github.com/Rakoski/apice_frontend.git](https://github.com/Rakoski/apice_frontend.git)</code>
+<code>git clone [https://github.com/Rakoski/Apice.git](https://github.com/Rakoski/Apice.git)</code>
 
 2. Navegue para o diretório do projeto:
 
