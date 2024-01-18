@@ -439,7 +439,6 @@ O projeto oferece as seguintes funcionalidades:
 ## Contribuição
 
 Este projeto foi desenvolvido com o objetivo de demonstrar habilidades e conhecimentos relevantes para um estágio na Ápice Sistemas. Se você deseja contribuir ou tem alguma dúvida específica sobre o projeto, sinta-se à vontade para entrar em contato.
-Contato
 
 Para mais informações ou dúvidas, entre em contato comigo:
 
