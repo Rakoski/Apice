@@ -111,13 +111,13 @@ O projeto oferece as seguintes funcionalidades:
   - Uso: `GET /api/produtos/:id`
   - Resposta:
     ```json
-  {
-    "data": {
-        "id_produto": 1,
-        "nome_produto": "mouse",
-        "valor_produto": "29.99"
-      }
-  }
+    {
+      "data": {
+          "id_produto": 1,
+          "nome_produto": "mouse",
+          "valor_produto": "29.99"
+        }
+    }
 
 - **POST /produtos**
   - Descrição: Cria um novo produto.
