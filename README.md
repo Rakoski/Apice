@@ -104,7 +104,7 @@ O projeto oferece as seguintes funcionalidades:
             "valor_produto": "1.99"
         }
     ]
-}
+  }
 
 - **GET /produtos/:id**
   - Descrição: Retorna um produto específico com base no ID.
